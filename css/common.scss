@@ -1,0 +1,55 @@
+body {
+    * {
+        font-family: 'Noto Sans KR', sans-serif;
+        letter-spacing: -0.8px;
+    }
+    button{
+        background-color: transparent;
+        border:none;
+    }
+    a{
+        color:#111;
+        text-decoration: none;
+
+    }
+    button,a{
+        display: inline-block;
+    }
+    .inner{
+        width:90%;
+        margin:auto;
+    }
+    .hidden{
+        display: none;
+    }
+    .opacity{
+        opacity: 0;
+    }
+}
+main{
+    section{
+        width:100%;
+        margin-bottom:100px;
+    }
+    .line{
+        position: absolute;
+        left:50%;
+        transform: translateX(-50%);
+        width:1px;
+        height:100px;
+        background-color: black;
+    }
+}
+
+// 폰트 설정
+.subTitle{
+    font-weight: bold;
+    font-size: 30px;
+    letter-spacing: -1.5px;
+    color:#222;
+}
+.subDesc{
+    font-size: 15px;
+    letter-spacing: -0.8px;
+    color:#888;
+}

@@ -1,0 +1,101 @@
+body header {
+  width: 100%;
+  position: fixed;
+  padding: 30px 0;
+  z-index: 9999;
+  transition: all 0.5s;
+}
+body header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+body header nav h1 {
+  font-size: 0;
+  background: url(../img/logo_white.png) no-repeat center center/cover;
+  width: 140px;
+  height: 32px;
+}
+body header nav h1 a {
+  width: 100%;
+  height: 100%;
+}
+body header nav ul.gnb {
+  position: absolute;
+  left: 55%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+body header nav ul.gnb > li {
+  position: relative;
+}
+body header nav ul.gnb > li > a {
+  display: block;
+  padding: 10px 30px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: 0;
+}
+body header nav ul.gnb > li .gnbSubWrap {
+  position: absolute;
+  width: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+body header nav ul.gnb > li .gnbSubWrap ul.gnbSub {
+  margin-top: 30px;
+  background-color: #fff;
+}
+body header nav ul.gnb > li .gnbSubWrap ul.gnbSub li a {
+  display: block;
+  padding: 20px 0;
+  text-align: center;
+  color: #000;
+}
+body header nav ul.gnb > li .gnbSubWrap ul.gnbSub li:hover a {
+  background-color: black;
+  color: #fff;
+}
+body header nav ul.gnb > li.hover:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+body header nav ul.gnb > li.hover.scroll:before {
+  background-color: #000;
+}
+body header nav button {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+body header nav button span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: #fff;
+}
+body header.scroll {
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 15px 0;
+}
+body header.scroll nav h1 {
+  background: url(../img/logo_color.png) no-repeat center center/cover;
+}
+body header.scroll nav ul li a {
+  color: #111;
+}
+body header.scroll nav button span {
+  background-color: #111;
+}
