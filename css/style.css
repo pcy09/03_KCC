@@ -1,3 +1,158 @@
+body * {
+  font-family: "Noto Sans KR", sans-serif;
+  letter-spacing: -0.8px;
+}
+body button {
+  background-color: transparent;
+  border: none;
+}
+body a {
+  color: #111;
+  text-decoration: none;
+}
+body button, body a {
+  display: inline-block;
+}
+body .inner {
+  width: 90%;
+  margin: auto;
+}
+body .hidden {
+  display: none;
+}
+body .opacity {
+  opacity: 0;
+}
+
+main section {
+  width: 100%;
+  margin-bottom: 100px;
+}
+main .line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 100px;
+  background-color: black;
+}
+
+.subTitle {
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: -1.5px;
+  color: #222;
+}
+
+.subDesc {
+  font-size: 15px;
+  letter-spacing: -0.8px;
+  color: #888;
+}
+
+body header {
+  width: 100%;
+  position: fixed;
+  padding: 30px 0;
+  z-index: 9999;
+  transition: all 0.5s;
+}
+body header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+body header nav h1 {
+  font-size: 0;
+  background: url(../img/logo_white.png) no-repeat center center/cover;
+  width: 140px;
+  height: 32px;
+}
+body header nav h1 a {
+  width: 100%;
+  height: 100%;
+}
+body header nav ul.gnb {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-left: 100px;
+}
+body header nav ul.gnb > li {
+  position: relative;
+}
+body header nav ul.gnb > li > a {
+  display: block;
+  padding: 10px 30px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: 0;
+}
+body header nav ul.gnb > li .gnbSubWrap {
+  position: absolute;
+  width: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+body header nav ul.gnb > li .gnbSubWrap ul.gnbSub {
+  margin-top: 30px;
+  background-color: #fff;
+}
+body header nav ul.gnb > li .gnbSubWrap ul.gnbSub li a {
+  display: block;
+  padding: 15px 0;
+  text-align: center;
+  color: #000;
+  transition: all 0.3s;
+}
+body header nav ul.gnb > li .gnbSubWrap ul.gnbSub li:hover a {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+body header nav ul.gnb > li.hover:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+body header nav ul.gnb > li.hover.scroll:before {
+  background-color: #000;
+}
+body header nav button {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+body header nav button span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: #fff;
+}
+body header.scroll {
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 15px 0;
+}
+body header.scroll nav h1 {
+  background: url(../img/logo_color.png) no-repeat center center/cover;
+}
+body header.scroll nav ul li a {
+  color: #111;
+}
+body header.scroll nav button span {
+  background-color: #111;
+}
+
 main {
   overflow: hidden;
 }
@@ -386,4 +541,221 @@ main section#s4 .contentWrap .recruit a:hover:before {
 }
 main section#s4 .contentWrap .recruit a:hover img {
   transform: scale(1.1);
+}
+
+footer {
+  background-color: #28282E;
+  width: 100%;
+  padding: 50px 0 30px;
+}
+footer .inner ul.footerNav {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+footer .inner ul.footerNav li a {
+  font-size: 14px;
+  color: #fff;
+  opacity: 0.5;
+  letter-spacing: 0;
+}
+footer .inner ul.footerNav li a:hover {
+  opacity: 1;
+}
+footer .inner address.textWrap {
+  margin-top: 60px;
+}
+footer .inner address.textWrap p {
+  color: #fff;
+  opacity: 0.5;
+  font-weight: 300;
+  font-size: 13px;
+  letter-spacing: 0;
+  line-height: 30px;
+}
+
+@media (max-width: 1024px) {
+  body .inner {
+    width: 95%;
+  }
+  header .inner nav ul.gnb {
+    position: fixed;
+    display: flex;
+    left: auto;
+    right: -250px;
+    top: 0;
+    bottom: 0;
+    width: 250px;
+    background-color: #111;
+    transform: translate(0, 0);
+    flex-direction: column;
+    justify-content: start;
+    text-align: center;
+    padding: 0;
+  }
+  header .inner nav ul.gnb > li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  header .inner nav ul.gnb > li > a {
+    display: block;
+    padding: 20px 0;
+  }
+  header .inner nav ul.gnb > li .icon {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(-45deg);
+    top: 20px;
+    right: 20px;
+  }
+  header .inner nav ul.gnb > li .gnbSubWrap {
+    position: static;
+    width: 100%;
+    left: auto;
+    transform: translateX(0);
+    display: none;
+  }
+  header .inner nav ul.gnb > li .gnbSubWrap ul.gnbSub {
+    margin-top: 0;
+    background-color: #fff;
+  }
+  header .inner nav ul.gnb > li.on .icon {
+    border-left: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    border-right: 2px solid #fff;
+    border-top: 2px solid #fff;
+    top: 25px;
+  }
+  header .inner nav button {
+    display: flex;
+  }
+  main section#s1 .tri01 {
+    width: 100%;
+    height: 0;
+    position: absolute;
+    left: 0;
+    top: -229px;
+    z-index: 20;
+    background: url(../img/tri01.png) no-repeat 100% 100%/100%;
+  }
+  main section#s1 .tri01 .line {
+    bottom: -30px;
+  }
+  main section#s1 .sectionTitle .slide {
+    display: none;
+  }
+  main section#s1 .swiperWrap .swiper-button-next,
+main section#s1 .swiperWrap .swiper-button-prev {
+    display: none;
+  }
+  main section#s2 {
+    height: auto;
+    margin-top: 200px;
+  }
+  main section#s2 .tri02 {
+    display: none;
+  }
+  main section#s2 .sectionTitle {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: -100px;
+    transform: translateX(0);
+  }
+  main section#s2 .sectionTitle h2 {
+    color: #111;
+  }
+  main section#s2 .sectionTitle p {
+    color: #111;
+  }
+  main section#s2 .contentWrap {
+    position: static;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    z-index: 5;
+  }
+  main section#s2 .contentWrap .business {
+    width: 100%;
+    height: 100px;
+    border-top: 2px solid #fff;
+  }
+  main section#s2 .contentWrap .business a p {
+    display: none;
+  }
+  main section#s2 .contentWrap .business a h3 {
+    font-size: 30px;
+    margin-bottom: 0;
+  }
+  main section#s2 .contentWrap .business:nth-of-type(2) {
+    border-left: none;
+    border-right: none;
+  }
+  main section#s2 .tri01_gray {
+    display: none;
+  }
+  main section#s3 {
+    padding-bottom: 100px;
+  }
+  main section#s3 span.line {
+    display: none;
+  }
+  main section#s3 .contentWrap {
+    background: none;
+    width: 100%;
+    height: auto;
+  }
+  main section#s3 .contentWrap .inner .news {
+    width: 100%;
+    max-width: 900px;
+    padding-top: 0;
+  }
+  main section#s4 .contentWrap {
+    flex-direction: column;
+  }
+  main section#s4 .contentWrap .recruit {
+    overflow: hidden;
+    width: 100%;
+    height: 250px;
+  }
+  footer {
+    width: 100%;
+    padding: 50px 0 30px;
+  }
+  footer .inner ul.footerNav {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+  }
+  footer .inner ul.footerNav li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 20px 0;
+    font-size: 14px;
+    color: #fff;
+    opacity: 0.5;
+    letter-spacing: 0;
+  }
+  footer .inner ul.footerNav li a:hover {
+    opacity: 1;
+  }
+  footer .inner address.textWrap {
+    margin-top: 60px;
+  }
+  footer .inner address.textWrap p {
+    color: #fff;
+    opacity: 0.5;
+    font-weight: 300;
+    font-size: 13px;
+    letter-spacing: 0;
+    line-height: 30px;
+  }
 }
