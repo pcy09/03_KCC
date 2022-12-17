@@ -51,6 +51,12 @@ main .line {
   font-size: 15px;
   letter-spacing: -0.8px;
   color: #888;
+  line-height: 1.3;
+}
+@media (max-width: 520px) {
+  .subDesc {
+    font-size: 13px;
+  }
 }
 
 body header {
@@ -294,8 +300,13 @@ main section#s1 .swiperWrap .swiper .textWrap p:nth-of-type(1) {
   font-size: 18px;
   margin-bottom: 10px;
 }
+@media (max-width: 520px) {
+  main section#s1 .swiperWrap .swiper .textWrap p:nth-of-type(1) {
+    font-size: 16px;
+  }
+}
 main section#s1 .swiperWrap .swiper .textWrap p:nth-of-type(2) {
-  font-size: 15px;
+  font-size: 16px;
 }
 main section#s1 .swiperWrap .swiper a.swiper-slide:hover img {
   transform: scale(1.1);
@@ -515,6 +526,10 @@ main section#s3 .contentWrap .inner .news .newsContent a {
 main section#s3 .contentWrap .inner .news .newsContent a p:nth-of-type(1) {
   font-size: 16px;
   letter-spacing: -1.5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 20px;
 }
 main section#s3 .contentWrap .inner .news .newsContent a p:nth-of-type(2) {
   font-size: 14px;
