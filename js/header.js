@@ -1,3 +1,8 @@
+/* a href='#' 클릭 무시 */
+$('a[href="#"]').click(function (ignore) {
+	ignore.preventDefault();
+});
+
 // PC버전
 $("ul.gnb > li").on("mouseenter mouseleave", function (aa) {
 	if ($(window).width() > 1024) {
@@ -50,15 +55,24 @@ $(window).resize(function () {
 		$(".gnbSubWrap").removeAttr("style");
 		$(".gnb").removeAttr("style");
 		$("ul.gnbSub").css({ "margin-top": "30px" });
-
 		$("ul.gnb>li").removeClass("on");
 		$("nav").animate({ left: 0 }, 0);
 		$(".trigger").removeClass("open");
+		$("header").removeClass("mscroll");
+
+		if ($(window).scrollTop() >= 400) {
+			$("header").addClass("scroll");
+			$("ul.gnbSub").css({ "margin-top": "16px" });
+			$("ul.gnb > li").addClass("scroll");
+		}
 	}
 	if ($(window).width() <= 1024) {
 		$("header").removeClass("scroll");
 		$("ul.gnb > li").removeClass("scroll");
 		$("ul.gnbSub").css({ "margin-top": "0px" });
+		if ($(window).scrollTop() >= 400) {
+			$("header").addClass("mscroll");
+		}
 	}
 });
 
@@ -75,5 +89,12 @@ $(window).scroll(function () {
 			$("ul.gnb > li").removeClass("scroll");
 		}
 		// scrollTop() 스크롤바 위치를 알아오거나 정함 (위에서부터)
+	}
+	if ($(window).width() <= 1024) {
+		if ($(window).scrollTop() >= 400) {
+			$("header").addClass("mscroll");
+		} else {
+			$("header").removeClass("mscroll");
+		}
 	}
 });

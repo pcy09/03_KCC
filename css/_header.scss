@@ -76,15 +76,36 @@ body {
 				}
 			}
 			button {
+				width: 30px;
+				height: 30px;
 				display: none;
 				flex-direction: column;
-				gap: 6px;
+				justify-content: center;
 				cursor: pointer;
 				span {
 					display: block;
-					width: 26px;
+					width: 30px;
 					height: 2px;
 					background-color: #fff;
+					transition: all 0.5s;
+					position: relative;
+					transition: all 0.5s;
+					&::before,
+					&::after {
+						content: "";
+						position: absolute;
+						width: 30px;
+						height: 2px;
+						left: 0;
+						background-color: #fff;
+						transition: all 0.3s;
+					}
+					&::before {
+						top: -10px;
+					}
+					&::after {
+						bottom: -10px;
+					}
 				}
 			}
 		}
@@ -110,5 +131,9 @@ body {
 				}
 			}
 		}
+	}
+	header.mscroll {
+		padding: 15px 0;
+		background-color: rgba(0, 0, 0, 0.8);
 	}
 }
