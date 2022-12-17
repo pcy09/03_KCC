@@ -71,6 +71,7 @@ body header nav h1 {
   background: url(../img/logo_white.png) no-repeat center center/cover;
   width: 140px;
   height: 32px;
+  z-index: 1;
 }
 body header nav h1 a {
   width: 100%;
@@ -566,7 +567,7 @@ main section#s4 .contentWrap .recruit a .textWrap p {
   line-height: 1.5;
 }
 main section#s4 .contentWrap .recruit a .textWrap p span {
-  font-size: 13px;
+  font-size: 14px;
 }
 main section#s4 .contentWrap .recruit a:before {
   content: "";
@@ -738,7 +739,7 @@ main section#s1 .swiperWrap .swiper-button-prev {
   }
   main section#s2 .contentWrap .business {
     width: 100%;
-    height: 100px;
+    height: 150px;
     border-top: 2px solid #fff;
   }
   main section#s2 .contentWrap .business a p {
@@ -777,7 +778,18 @@ main section#s1 .swiperWrap .swiper-button-prev {
   main section#s4 .contentWrap .recruit {
     overflow: hidden;
     width: 100%;
-    height: 250px;
+    height: 180px;
+  }
+  main section#s4 .contentWrap .recruit a .textWrap h3 {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+  main section#s4 .contentWrap .recruit a .textWrap p {
+    font-size: 14px;
+  }
+  main section#s4 .contentWrap .recruit a::before {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.3);
   }
   footer {
     width: 100%;

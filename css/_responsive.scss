@@ -142,7 +142,7 @@
 				z-index: 5;
 				.business {
 					width: 100%;
-					height: 100px;
+					height: 150px;
 					border-top: 2px solid #fff;
 					a {
 						p {
@@ -187,7 +187,22 @@
 				.recruit {
 					overflow: hidden;
 					width: 100%;
-					height: 250px;
+					height: 180px;
+					a {
+						.textWrap {
+							h3 {
+								font-size: 30px;
+								margin-bottom: 15px;
+							}
+							p {
+								font-size: 14px;
+							}
+						}
+						&::before {
+							display: block;
+							background-color: rgba(0, 0, 0, 0.3);
+						}
+					}
 				}
 			}
 		}
